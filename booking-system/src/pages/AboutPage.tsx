@@ -5,11 +5,13 @@ import Modal from '../components/Modal.tsx';
 const AboutPage = () => {
 	return (
 		<>
-			<Header></Header>
-			<div className="align-center">
-			<Modal></Modal>
-			</div>			
-			<Footer></Footer>
+			<div className='min-h-screen flex flex-col'>
+				<Header></Header>
+				<main className='flex-1 align-center'>
+					<Modal></Modal>
+				</main>
+				<Footer />
+			</div>
 		</>
 	);
 };

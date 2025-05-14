@@ -4,8 +4,13 @@ import Footer from '../components/Footer.tsx';
 const BookingPage = () => {
 	return (
 		<>
-			<Header></Header>
-			<Footer></Footer>
+			<div className='min-h-screen flex flex-col'>
+				<Header></Header>
+				<main className='flex-1'>
+					
+				</main>
+				<Footer />
+			</div>
 		</>
 	);
 };
