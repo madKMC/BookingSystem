@@ -1,11 +1,13 @@
-import express from 'express';
-const app = express();
+import express from "express";
+import bookingsRoute from "./routes/bookings";
+import cors from "cors";
 
+const app = express();
+app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
 
-app.get('/', (req, res) => {
-	res.send('Backend is running!');
-});
+app.use("/api/bookings", bookingsRoute);
 
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(4000, () => {
+  console.log("Backend running on http://localhost:4000");
+});

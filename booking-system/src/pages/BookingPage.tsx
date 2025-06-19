@@ -1,5 +1,6 @@
 import Header from '../components/Header.tsx';
 import Footer from '../components/Footer.tsx';
+import Booking from '../components/Booking.tsx';
 
 const BookingPage = () => {
 	return (
@@ -7,7 +8,7 @@ const BookingPage = () => {
 			<div className='min-h-screen flex flex-col'>
 				<Header></Header>
 				<main className='flex-1'>
-					
+					<Booking />
 				</main>
 				<Footer />
 			</div>

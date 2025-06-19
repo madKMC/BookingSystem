@@ -22,6 +22,16 @@ const Header: React.FC = () => {
 								<li>
 									<a
 										className='text-lg font-medium text-blue-800 hover:text-gray-600 hover:underline hover:animate-pulse'
+										href='/'
+										onClick={() => setMobileMenuOpen(false)}
+									>
+										{' '}
+										Home{' '}
+									</a>
+								</li>
+								<li>
+									<a
+										className='text-lg font-medium text-blue-800 hover:text-gray-600 hover:underline hover:animate-pulse'
 										href='/About'
 										onClick={() => setMobileMenuOpen(false)}
 									>
@@ -53,23 +63,6 @@ const Header: React.FC = () => {
 						</nav>
 
 						<div className='flex items-center gap-4'>
-							<div className='sm:flex sm:gap-4'>
-								<a
-									className='rounded-md text-base border-indigo-500 bg-indigo-500 px-5 py-2.5 font-medium text-white shadow-sm'
-									href='/Login'
-								>
-									Login
-								</a>
-
-								<div className='hidden sm:flex'>
-									<a
-										className='rounded-md text-base bg-white px-5 py-2.5 font-medium text-indigo-500'
-										href='/Register'
-									>
-										Register
-									</a>
-								</div>
-							</div>
 							{/* Mobile Hamburger Button */}
 							<button
 								onClick={toggleMobileMenu}
@@ -97,6 +90,16 @@ const Header: React.FC = () => {
 										<li>
 											<a
 												className='text-lg font-bold text-blue-800 hover:text-gray-600 hover:underline hover:animate-pulse'
+												href='/'
+												onClick={() => setMobileMenuOpen(false)}
+											>
+												{' '}
+												Home{' '}
+											</a>
+										</li>
+										<li>
+											<a
+												className='text-lg font-bold text-blue-800 hover:text-gray-600 hover:underline hover:animate-pulse'
 												href='/About'
 												onClick={() => setMobileMenuOpen(false)}
 											>
@@ -107,7 +110,7 @@ const Header: React.FC = () => {
 										<li>
 											<a
 												className='text-lg text-blue-800 hover:text-gray-600 hover:underline hover:animate-pulse'
-												href='/Booking'
+												href='/Bookings'
 												onClick={() => setMobileMenuOpen(false)}
 											>
 												{' '}
