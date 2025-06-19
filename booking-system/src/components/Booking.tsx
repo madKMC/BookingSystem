@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import CustomTimePicker from './CustomTimePicker';
 
 const Booking = () => {
 	const [form, setForm] = useState({ name: '', email: '', date: '', time: '' });
@@ -24,22 +25,33 @@ const Booking = () => {
 	};
 
 	const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+	const [selectedTime, setSelectedTime] = useState('');
+
+	const availableTimes = [
+		'09:00',
+		'10:00',
+		'11:00',
+		'13:00',
+		'14:00',
+		'15:00',
+		'16:00',
+	];
 
 	return (
 		<div className='max-w-md mx-auto p-4'>
-			<h1 className='text-2xl mb-4 w-xs'>Book a Session</h1>
+			<h1 className='text-2xl mb-2 w-xs'>Book a Session</h1>
 			<input
 				name='name'
 				placeholder='Name'
 				onChange={handleChange}
-				className='mb-2 p-2 w-xs border'
+				className='mt-2 p-2 w-xs border rounded'
 			/>
 			<br />
 			<input
 				name='email'
 				placeholder='Email'
 				onChange={handleChange}
-				className='mb-2 p-2 w-xs border'
+				className='mt-2 p-2 w-xs border rounded'
 			/>
 			<DatePicker
 				selected={selectedDate}
@@ -60,31 +72,30 @@ const Booking = () => {
 					return day !== 0 && day !== 6; // Disable Sunday (0) and Saturday (6)
 				}}
 				dateFormat='yyyy-MM-dd'
-				className='mb-2 p-2 w-xs border'
-                placeholderText='Select a date'
+				className='w-xs mt-2 p-2 border rounded bg-white text-gray-800'
+				calendarClassName='bg-white border rounded-lg shadow-lg z-50'
+				dayClassName={(date) =>
+					'text-sm  rounded-full hover:bg-blue-100 ' +
+					(date.getDay() === 0 || date.getDay() === 6
+						? 'text-gray-400'
+						: 'text-black')
+				}
+                
+				placeholderText='Select a date'
 			/>
-			<select
-				name='time'
-				onChange={handleChange}
-				className='mb-2 p-2 w-xs border'
-			>
-				<option value=''>Select a time</option>
-				<option value='09:00'>09:00</option>
-				<option value='10:00'>10:00</option>
-				<option value='11:00'>11:00</option>
-				{/* exclude 12:00 */}
-				<option value='13:00'>13:00</option>
-				<option value='14:00'>14:00</option>
-				<option value='15:00'>15:00</option>
-				<option value='16:00'>16:00</option>
-			</select>
-			<br />
-			<button
-				onClick={handleSubmit}
-				className='bg-blue-500 text-white px-4 py-2 rounded'
-			>
-				Book
-			</button>
+			<CustomTimePicker
+				selectedTime={selectedTime}
+				setSelectedTime={setSelectedTime}
+				availableTimes={availableTimes}
+			/>
+			<div>
+				<button
+					onClick={handleSubmit}
+					className='bg-blue-500 text-white mt-2 px-4 py-2 rounded'
+				>
+					Book
+				</button>
+			</div>
 			{message && <p className='mt-4'>{message}</p>}
 		</div>
 	);
