@@ -6,10 +6,11 @@ const ContactPage = () => {
 	return (
 		<>
 			<div className='min-h-screen flex flex-col'>
-				<Header></Header>
-				<main className='flex-1'>
-					<Contact></Contact>
+				<Header />
+				<main className='flex justify-center px-4 py-8 sm:px-6 lg:px-8'>
+					<Contact />
 				</main>
+				<div className='flex-grow' />
 				<Footer />
 			</div>
 		</>
