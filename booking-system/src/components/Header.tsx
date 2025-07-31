@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ZDLogo from './ZDLogo';
 
 const Header: React.FC = () => {
@@ -11,53 +12,53 @@ const Header: React.FC = () => {
 			<div className='mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8'>
 				<div className='flex h-16 items-center justify-between'>
 					<div className='flex-1 md:flex md:items-center md:gap-12'>
-						<a className='block text-white' href='/'>
-							<ZDLogo></ZDLogo>
-						</a>
+						<Link className='block text-white' to='/' onClick={() => setMobileMenuOpen(false)}>
+							<ZDLogo />
+						</Link>
 					</div>
 					{/* Navigation for screens larger than 768px */}
 					<div className='md:flex md:items-center md:gap-12'>
 						<nav aria-label='Global' className={`hidden lg:block`}>
 							<ul className={`text-sm lg:flex lg:flex-row lg:gap-6`}>
 								<li>
-									<a
+									<Link
 										className='text-lg font-medium text-blue-800 hover:text-gray-600 hover:underline hover:animate-pulse'
-										href='/'
+										to='/'
 										onClick={() => setMobileMenuOpen(false)}
 									>
 										{' '}
 										Home{' '}
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a
+									<Link
 										className='text-lg font-medium text-blue-800 hover:text-gray-600 hover:underline hover:animate-pulse'
-										href='/About'
+										to='/About'
 										onClick={() => setMobileMenuOpen(false)}
 									>
 										{' '}
 										About Us{' '}
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a
+									<Link
 										className='text-lg font-medium text-blue-800 hover:text-gray-600 hover:underline hover:animate-pulse'
-										href='/Bookings'
+										to='/Bookings'
 										onClick={() => setMobileMenuOpen(false)}
 									>
 										{' '}
 										Bookings{' '}
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a
+									<Link
 										className='text-lg font-medium text-blue-800 hover:text-gray-600 hover:underline hover:animate-pulse'
-										href='/Contact'
+										to='/Contact'
 										onClick={() => setMobileMenuOpen(false)}
 									>
 										{' '}
 										Contact{' '}
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</nav>
@@ -88,44 +89,44 @@ const Header: React.FC = () => {
 								<div className='lg:hidden absolute top-16 left-0 w-full bg-white shadow-md z-50'>
 									<ul className='flex flex-col space-y-4 p-4'>
 										<li>
-											<a
+											<Link
 												className='text-lg font-bold text-blue-800 hover:text-gray-600 hover:underline hover:animate-pulse'
-												href='/'
+												to='/'
 												onClick={() => setMobileMenuOpen(false)}
 											>
 												{' '}
 												Home{' '}
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
+											<Link
 												className='text-lg font-bold text-blue-800 hover:text-gray-600 hover:underline hover:animate-pulse'
-												href='/About'
+												to='/About'
 												onClick={() => setMobileMenuOpen(false)}
 											>
 												{' '}
 												About Us{' '}
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
+											<Link
 												className='text-lg text-blue-800 hover:text-gray-600 hover:underline hover:animate-pulse'
-												href='/Bookings'
+												to='/Bookings'
 												onClick={() => setMobileMenuOpen(false)}
 											>
 												{' '}
 												Bookings{' '}
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
+											<Link
 												className='text-lg text-blue-800 hover:text-gray-600 hover:underline hover:animate-pulse'
-												href='/Contact'
+												to='/Contact'
 												onClick={() => setMobileMenuOpen(false)}
 											>
 												{' '}
 												Contact{' '}
-											</a>
+											</Link>
 										</li>
 									</ul>
 								</div>
