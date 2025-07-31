@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
 						</a>
 					</div>
 				</div>
-				<img src='/BookingSystem/booking-system/public/79082.jpg' className='mr-2 p-2'></img>
+				<img src='/BookingSystem/79082.jpg' className='mr-2 p-2'></img>
 			</div>
 		</section>
 	);
