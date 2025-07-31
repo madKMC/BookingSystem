@@ -8,7 +8,7 @@ import RegisterPage from './pages/RegisterPage'
 
 function App() {
 	return (
-		<Router>
+		<Router basename="/BookingSystem">
 			<Routes>
 				<Route path='/' element={<HomePage />} />
 				<Route path='/About' element={<AboutPage />} />
