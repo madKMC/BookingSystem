@@ -24,11 +24,11 @@ const Modal: React.FC = () => {
 
 						<div className='grid grid-cols-2 gap-4 md:grid-cols-1 lg:grid-cols-2'>
 							<img
-								src='/PsychologyImage1.jpg'
+								src='/BookingSystem/booking-system/public/PsychologyImage1.jpg'
 								className='h-40 w-full object-cover sm:h-56 md:h-full'
 							></img>
 							<img
-								src='/PsychologyImage2.jpg'
+								src='/BookingSystem/booking-system/public/PsychologyImage2.jpg'
 								className='h-40 w-full object-cover sm:h-56 md:h-full'
 							></img>
 						</div>
