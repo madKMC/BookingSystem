@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ZDLogo from './ZDLogo';
 
 const Footer: React.FC = () => {
@@ -19,43 +20,43 @@ const Footer: React.FC = () => {
 
 				<ul className='mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12'>
 					<li>
-						<a
+						<Link
 							className='text-gray-700 transition hover:text-gray-700/75'
-							href='/'
+							to='/'
 						>
 							{' '}
 							Home{' '}
-						</a>
+						</Link>
 					</li>
 
 					<li>
-						<a
+						<Link
 							className='text-gray-700 transition hover:text-gray-700/75'
-							href='/About'
+							to='/About'
 						>
 							{' '}
 							About Us{' '}
-						</a>
+						</Link>
 					</li>
 
 					<li>
-						<a
+						<Link
 							className='text-gray-700 transition hover:text-gray-700/75'
-							href='/Bookings'
+							to='/Bookings'
 						>
 							{' '}
 							Bookings{' '}
-						</a>
+						</Link>
 					</li>
 
 					<li>
-						<a
+						<Link
 							className='text-gray-700 transition hover:text-gray-700/75'
-							href='/Contact'
+							to='/Contact'
 						>
 							{' '}
 							Contact{' '}
-						</a>
+						</Link>
 					</li>
 				</ul>
 
