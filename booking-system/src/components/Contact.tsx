@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
       <article className='w-full max-w-md sm:max-w-lg md:min-w-[500px] md:max-w-xl lg:max-w-2xl rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-sm'>
         <div className='flex items-center gap-4'>
           <img
-            src='/PsychologyProfilePic.jpg'
+            src='/BookingSystem/booking-system/public/PsychologyProfilePic.jpg'
             alt='Lees Mom Profile'
             className='size-16 rounded-full object-cover'
           />
